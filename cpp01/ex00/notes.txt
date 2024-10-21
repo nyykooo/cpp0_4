@@ -1,0 +1,4 @@
+Quando eu quero usar o zombie fora do escopo da funcao preciso de memoria da heap, 
+pois a stack so me permitira usar ele dentro do escopo daquela funcao, e ao fim de sua execucao o zombie sumira
+
+para alocar memoria em cpp devemos usar a keyword "new"
