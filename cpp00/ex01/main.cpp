@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:50:58 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/09/24 14:16:44 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/25 16:47:07 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Please enter a comand (ADD, SEARCH, EXIT):" << std::endl;
-		std::getline(std::cin, input); 
+		if (!std::getline(std::cin, input))
+			break; 
 
 		if (input.compare("EXIT") == 0)
 		{
