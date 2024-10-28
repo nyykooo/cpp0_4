@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:01:54 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/09/24 15:47:47 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:17:41 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,14 @@ void	ft_print_mid(void)
 void	ft_print_bottom(void)
 {
 	std::cout << "|__________|__________|__________|__________|" << std::endl;
+}
+
+bool	ft_check_number(std::string number)
+{
+	for (std::size_t i = 0; i < number.size(); i++)
+	{
+		if (!std::isdigit(number[i]))
+			return (false);
+	}
+	return (true);
 }

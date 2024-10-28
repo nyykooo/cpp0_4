@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 16:26:53 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/09/24 15:08:50 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:19:21 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "Utils.hpp"
 
 class Contact {
 	private:
