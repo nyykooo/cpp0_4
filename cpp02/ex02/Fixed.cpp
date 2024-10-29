@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 11:08:18 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/01 17:18:50 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:37:12 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,14 @@ float Fixed::toFloat( void ) const
 Fixed	Fixed::operator+(const Fixed& number) const
 {
 	Fixed res;
-	res.setRawBits(res.getRawBits() + number.getRawBits());
+	res.setRawBits(this->getRawBits() + number.getRawBits());
 	return (res);
 }
 
 Fixed	Fixed::operator-(const Fixed& number) const
 {
 	Fixed res;
-	res.setRawBits(res.getRawBits() - number.getRawBits());
+	res.setRawBits(this->getRawBits() - number.getRawBits());
 	return (res);
 }
 
@@ -92,7 +92,7 @@ Fixed	Fixed::operator*(const Fixed& number) const
 Fixed	Fixed::operator/(const Fixed& number) const
 {
 	Fixed res;
-	res.setRawBits(this->getRawBits() / number.getRawBits() << this->_bits);
+	res.setRawBits((this->getRawBits() << this->_bits) / number.getRawBits());
 	return (res);
 }
 
