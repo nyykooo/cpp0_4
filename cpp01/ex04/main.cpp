@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:11:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/09/26 15:04:26 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:41:37 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,16 @@ int main( int ac, char **av )
 		return (EXIT_FAILURE);
 	}
 	
-	std::ifstream fileName(av[1]);
+	std::string	name = av[1];
+	std::ifstream fileName(name);
 	if (!fileName.is_open())
 	{
 		std::cerr << "Erro: can't open filename" << std::endl;
 		return (EXIT_FAILURE);
 	}
 	
-	std::ofstream newFile("newFile.txt");
+	std::string	new_name = ".replace";
+	std::ofstream newFile(name.append(new_name));
 	if (!newFile.is_open())
 	{
 		std::cerr << "Erro: can't open or create newFile" << std::endl;

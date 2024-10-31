@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 13:51:09 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/09/25 13:59:48 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:08:12 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 int	main( void )
 {
 	std::string	str = "HI THIS IS BRAIN";
-	std::string *strPTR = &str;
-	std::string	&strREF = str;
+	std::string *strPTR = &str; // a refference is an alias to another variable
+	std::string	&strREF = str; // literally a pointer to the address
 
 	std::cout << "Memory address of str: " << &str << std::endl;
 	std::cout << "Memory address hold by strPTR: " << strPTR << std::endl;
