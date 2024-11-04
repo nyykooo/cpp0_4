@@ -6,13 +6,32 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:11:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/31 16:41:37 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:34:25 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
+
+bool ft_find_word(std::string &line, std::string word)
+{
+	size_t position = line.find(word);
+	if (position != std::string::npos) // se a palavra nao for encontrada retorna npos
+		return (true);
+	else
+		return (false);
+}
+
+void ft_replace_word(std::string &line, std::string word, std::string replace, size_t position)
+{
+	std::string new_line;
+	new_line = line.substr(0, position);
+	new_line += replace;
+	new_line += line.substr(position + word.length());
+	line = new_line;
+}
 
 int main( int ac, char **av )
 {
@@ -37,14 +56,21 @@ int main( int ac, char **av )
 		std::cerr << "Erro: can't open or create newFile" << std::endl;
 		return (EXIT_FAILURE);
 	}
+	
+	std::ostringstream buffer;
+	buffer << fileName.rdbuf();
+	std::string line = buffer.str();
 
-	std::string	word;
-	while (fileName >> word)
+	std::string word = av[2];
+	std::string replace = av[3];
+	size_t position = 0;
+	while ((position = line.find(word, position)) != std::string::npos)
 	{
-		if (word.compare(av[2]) == 0)
-			word = av[3];
-		newFile << word << " ";
+		ft_replace_word(line, word, replace, position);
+		position += replace.length();
 	}
+	
+	newFile << line;
 
 	fileName.close();
 	newFile.close();
