@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 11:08:21 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/01 16:57:54 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:08:13 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,26 @@ int main( void )
 	
 	a = Fixed( 1234.4321f );
 	
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
+	std::cout << std::endl;
 	
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	std::cout << "[Fixed]" << std::endl;
+	std::cout << "Fixed a is: " << a << std::endl;
+	std::cout << "Fixed b is: " << b << std::endl;
+	std::cout << "Fixed c is: " << c << std::endl;
+	std::cout << "Fixed d is: " << d << std::endl;
 	
+	std::cout << std::endl << "[toInt]:" << std::endl;
+	std::cout << "Integer a is: " << a.toInt() << std::endl;
+	std::cout << "Integer b is: " << b.toInt() << std::endl;
+	std::cout << "Integer c is: " << c.toInt() << std::endl;
+	std::cout << "Integer d is: " << d.toInt() << std::endl;
+
+	std::cout << std::endl << "[toFloat]:" << std::endl;
+	std::cout << "Float a is: " << a.toFloat() << std::endl;
+	std::cout << "Float b is: " << b.toFloat() << std::endl;
+	std::cout << "Float c is: " << c.toFloat() << std::endl;
+	std::cout << "Float d is: " << d.toFloat() << std::endl;
+	
+	std::cout << std::endl;
 	return 0;
 }
