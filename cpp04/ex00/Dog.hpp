@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 17:55:30 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/07 17:38:23 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/07 17:55:24 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main(void)
+#include "Animal.hpp"
+
+class Dog : public Animal
 {
-	Animal	animal;
-	Dog		dog;
+	private:
+	public:
+		Dog();
+		Dog(const Dog &copy);
+		Dog &operator=(Dog const &copy);
+		~Dog();
+		
+};
 
-	return (0);
-}
+#endif

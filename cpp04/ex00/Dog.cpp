@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 18:05:45 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:08:22 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
-Animal::Animal(): _type("Animal")
+Dog::Dog()
 {
-	std::cout << _type << " is born healthy" << std::endl;
+	_type = "Dog";
+	std::cout << _type <<" is a beatiful puppy" << std::endl;
 }
 
-Animal::Animal ( const Animal &copy )
+Dog::Dog ( const Dog &copy )
 {
 	if (this != &copy)
 	{
@@ -26,7 +27,8 @@ Animal::Animal ( const Animal &copy )
 	}
 }
 
-Animal&	Animal::operator=(Animal const &copy) {
+Dog&	Dog::operator=(Dog const &copy) 
+{
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy) {
 		*this = copy;
@@ -34,12 +36,7 @@ Animal&	Animal::operator=(Animal const &copy) {
 	return *this;
 }
 
-Animal::~Animal()
+Dog::~Dog()
 {
-	std::cout << _type << " is resting in peace now" << std::endl;
-}
-
-std::string Animal::getType()
-{
-	return (this->_type);
+	std::cout << _type << " is feeling tired now" << std::endl;
 }
