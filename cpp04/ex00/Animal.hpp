@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 17:34:22 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/07 15:37:41 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/07 17:23:08 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-int main(void)
+# include <iostream>
+
+class Animal
 {
-	Animal animal;
+	protected:
+		std::string	_type;
+	public:
+		Animal();
+		Animal(const Animal &copy);
+		Animal &operator=(Animal const &copy);
+		~Animal();
 
-	return (0);
-}
+		std::string getType();
+};
+
+#endif
