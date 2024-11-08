@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:37:41 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 17:50:13 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/07 17:38:23 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 17:49:15 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include <iostream>
+#include "Animal.hpp"
 
-class Animal
+class Cat : public Animal
 {
-	protected:
-		std::string	_type;
+	private:
 	public:
-		Animal();
-		Animal(const Animal &copy);
-		Animal &operator=(Animal const &copy);
-		~Animal();
-
-		virtual std::string getType();
+		Cat();
+		Cat(const Cat &copy);
+		Cat &operator=(Cat const &copy);
+		~Cat();
+		
 };
 
 #endif
