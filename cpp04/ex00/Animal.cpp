@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 18:05:45 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:39:04 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ Animal::~Animal()
 std::string Animal::getType()
 {
 	return (this->_type);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Standard animal noise" << std::endl;
 }

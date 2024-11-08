@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:37:41 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 17:50:13 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:39:31 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ class Animal
 		Animal &operator=(Animal const &copy);
 		~Animal();
 
-		virtual std::string getType();
+		std::string	getType() const;
+		void		makeSound() const;
 };
 
 #endif

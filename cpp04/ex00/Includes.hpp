@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 19:39:59 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/08 19:33:35 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 19:34:56 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes.hpp"
+#ifndef INCLUDES_HPP
+# define INCLUDES_HPP
 
-int main()
-{
-	const Animal* meta = new Animal;
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+# include "Cat.hpp"
+# include "Dog.hpp"
+# include "Animal.hpp"
 
-	meta->makeSound();
-
-	delete meta;
-	delete j;
-	delete i;
-
-	return 0;
-}
+#endif
