@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 11:08:50 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 15:19:18 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 19:39:59 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Includes.hpp"
 
-Zombie *zombieHorde( int N, std::string name)
+int main()
 {
-	int	i = 0;
+	const Animal* meta = new Animal;
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-	if (N < 0)
-		return NULL;
-	Zombie *zombies = new Zombie[N];
-	while (i < N)
-	{
-		zombies[i++].initializeZombie( name );
-	}
-	return zombies;
+	meta->makeSound();
+
+	delete meta;
+	delete j;
+	delete i;
+
+	return 0;
 }

@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 11:08:50 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 15:19:18 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/08 19:33:35 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 19:34:56 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef INCLUDES_HPP
+# define INCLUDES_HPP
 
-Zombie *zombieHorde( int N, std::string name)
-{
-	int	i = 0;
+# include "Cat.hpp"
+# include "Dog.hpp"
+# include "Animal.hpp"
 
-	if (N < 0)
-		return NULL;
-	Zombie *zombies = new Zombie[N];
-	while (i < N)
-	{
-		zombies[i++].initializeZombie( name );
-	}
-	return zombies;
-}
+#endif

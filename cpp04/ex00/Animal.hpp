@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 11:08:50 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/07 15:19:18 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/07 15:37:41 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 19:39:31 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-Zombie *zombieHorde( int N, std::string name)
+# include <iostream>
+
+class Animal
 {
-	int	i = 0;
+	protected:
+		std::string	_type;
+	public:
+		Animal();
+		Animal(const Animal &copy);
+		Animal &operator=(Animal const &copy);
+		~Animal();
 
-	if (N < 0)
-		return NULL;
-	Zombie *zombies = new Zombie[N];
-	while (i < N)
-	{
-		zombies[i++].initializeZombie( name );
-	}
-	return zombies;
-}
+		std::string	getType() const;
+		void		makeSound() const;
+};
+
+#endif

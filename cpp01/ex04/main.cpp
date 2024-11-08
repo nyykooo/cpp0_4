@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:11:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/04 13:34:25 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:16:05 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int main( int ac, char **av )
 	size_t position = 0;
 	while ((position = line.find(word, position)) != std::string::npos)
 	{
+		if (word == "")
+			break ;
 		ft_replace_word(line, word, replace, position);
 		position += replace.length();
 	}
