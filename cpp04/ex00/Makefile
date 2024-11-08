@@ -6,7 +6,7 @@
 #    By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 10:39:21 by ncampbel          #+#    #+#              #
-#    Updated: 2024/11/08 23:13:42 by ncampbel         ###   ########.fr        #
+#    Updated: 2024/11/08 23:23:50 by ncampbel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC= c++
 
 CFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
