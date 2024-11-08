@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 19:39:04 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:11:05 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,15 @@ Animal&	Animal::operator=(Animal const &copy) {
 
 Animal::~Animal()
 {
-	std::cout << _type << " is resting in peace now" << std::endl;
+	std::cout << _type << " is resting now" << std::endl;
 }
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
 	return (this->_type);
 }
 
 void	Animal::makeSound() const
 {
-	std::cout << "Standard animal noise" << std::endl;
+	std::cout << "Animal: pipipi popopo" << std::endl;
 }

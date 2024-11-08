@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 18:00:29 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:05:03 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ Cat&	Cat::operator=(Cat const &copy)
 
 Cat::~Cat()
 {
-	std::cout << _type << " is feeling tired now" << std::endl;
+	std::cout << _type << " is feeling tired" << std::endl;
 }
 
+void	Cat::makeSound() const
+{
+	std::cout << "Cat: Meow meow" << std::endl;
+}

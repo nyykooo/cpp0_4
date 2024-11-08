@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:04:59 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:11:05 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
-Dog::Dog()
+WrongAnimal::WrongAnimal(): _type("WrongAnimal")
 {
-	_type = "Dog";
-	std::cout << _type <<" is a beatiful kitten" << std::endl;
+	std::cout << _type << " is born healthy" << std::endl;
 }
 
-Dog::Dog ( const Dog &copy )
+WrongAnimal::WrongAnimal ( const WrongAnimal &copy )
 {
 	if (this != &copy)
 	{
@@ -27,8 +26,7 @@ Dog::Dog ( const Dog &copy )
 	}
 }
 
-Dog&	Dog::operator=(Dog const &copy) 
-{
+WrongAnimal&	WrongAnimal::operator=(WrongAnimal const &copy) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy) {
 		*this = copy;
@@ -36,12 +34,17 @@ Dog&	Dog::operator=(Dog const &copy)
 	return *this;
 }
 
-Dog::~Dog()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << _type << " is feeling tired" << std::endl;
+	std::cout << _type << " is resting now" << std::endl;
 }
 
-void	Dog::makeSound() const
+std::string WrongAnimal::getType() const
 {
-	std::cout << "Dog: Au Au" << std::endl;
+	return (this->_type);
+}
+
+void	WrongAnimal::makeSound() const
+{
+	std::cout << "WrongAnimal: pei" << std::endl;
 }
