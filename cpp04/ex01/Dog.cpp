@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:04:59 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:25:03 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 Dog::Dog()
 {
 	_type = "Dog";
-	std::cout << _type <<" is a beatiful kitten" << std::endl;
+	_brain = new Brain();
+	std::cout << _type <<" is a beatiful puppy" << std::endl;
 }
 
 Dog::Dog ( const Dog &copy )
@@ -38,6 +39,7 @@ Dog&	Dog::operator=(Dog const &copy)
 
 Dog::~Dog()
 {
+	delete _brain;
 	std::cout << _type << " is feeling tired" << std::endl;
 }
 

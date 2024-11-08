@@ -1,49 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:25:10 by ncampbel         ###   ########.fr       */
+/*   Created: 2024/11/08 23:19:37 by ncampbel          #+#    #+#             */
+/*   Updated: 2024/11/08 23:21:11 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat()
+Brain::Brain()
 {
-	_type = "Cat";
-	_brain = new Brain();
-	std::cout << _type <<" is a beatiful kitten" << std::endl;
+	std::cout << "Brain is thinking" << std::endl;
 }
 
-Cat::Cat ( const Cat &copy )
+Brain::Brain(const Brain &copy)
 {
 	if (this != &copy)
 	{
-		std::cout << "Copy constructor called" << std::endl;
+		std::cout << "Brain copy constructor called" << std::endl;
 		*this = copy;
 	}
 }
 
-Cat&	Cat::operator=(Cat const &copy) 
+Brain&	Brain::operator=(Brain const &copy)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &copy) {
+	std::cout << "Brain copy assignment operator called" << std::endl;
+	if (this != &copy)
+	{
 		*this = copy;
 	}
 	return *this;
 }
 
-Cat::~Cat()
+Brain::~Brain()
 {
-	delete _brain;
-	std::cout << _type << " is feeling tired" << std::endl;
+	std::cout << "Brain is getting dizzy" << std::endl;
 }
 
-void	Cat::makeSound() const
-{
-	std::cout << "Cat: Meow meow" << std::endl;
-}
