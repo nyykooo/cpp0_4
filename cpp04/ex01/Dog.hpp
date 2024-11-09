@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:38:23 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:22:01 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/09 18:44:33 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Dog : public Animal
 		~Dog();
 
 		void	makeSound() const;
+		Brain*	getBrain() const;
 		
 };
 
