@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:07:35 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/03 15:39:23 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:52:38 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
 	
 	if (this != &copy)
 	{
-		*this = copy;
+		this->_attack = copy._attack;
+		this->_ep = copy._ep;
+		this->_hp = copy._hp;
+		this->_name = copy._name;
 	}
 	std::cout << "ScavTrap Copy Assignment operator called" << std::endl;
 	return (*this);

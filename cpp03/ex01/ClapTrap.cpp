@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/18 18:55:25 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:51:34 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 ClapTrap& ClapTrap::operator=(ClapTrap const &copy)
 {
 	if (this != &copy) {
-		*this = copy;
+		this->_attack = copy._attack;
+		this->_ep = copy._ep;
+		this->_hp = copy._hp;
+		this->_name = copy._name;
 	}
 	return *this;
 }
