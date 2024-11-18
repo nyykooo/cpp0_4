@@ -6,15 +6,15 @@
 #    By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 10:39:21 by ncampbel          #+#    #+#              #
-#    Updated: 2024/11/08 23:23:08 by ncampbel         ###   ########.fr        #
+#    Updated: 2024/11/18 19:07:27 by ncampbel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= Animal
 
-CC= c++
+CXX= c++
 
-CFLAGS= -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
@@ -23,7 +23,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
