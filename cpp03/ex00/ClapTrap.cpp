@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/01 19:36:41 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:30:22 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 ClapTrap::ClapTrap() : _name(""), _hp(10), _ep(10), _attack(0)
 {
 	std::cout << "ClapTrap Default Constructor called" << std::endl;
-	this->_attack = 0;
-	this->_ep = 10;
-	this->_hp = 10;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _ep(10), _attack(0)
@@ -36,7 +33,10 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 ClapTrap& ClapTrap::operator=(ClapTrap const &copy)
 {
 	if (this != &copy) {
-		*this = copy;
+		this->_attack = copy._attack;
+		this->_ep = copy._ep;
+		this->_hp = copy._hp;
+		this->_name = copy._name;
 	}
 	return *this;
 }
