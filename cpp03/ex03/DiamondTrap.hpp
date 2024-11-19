@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:25:21 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:12:08 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:34:37 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ class DiamondTrap: public ScavTrap, public FragTrap
 
 		//	function picked from heritage
 		void attack(const std::string &target);
+
+		// getters
+		std::string	getName(void) const;
+		int			getHP(void) const;
+		int			getEP(void) const;
+		int			getAttack(void) const;
 };
 
 

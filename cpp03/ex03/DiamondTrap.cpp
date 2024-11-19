@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:25:18 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:28:34 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:34:53 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,26 @@ void	DiamondTrap::whoAmI()
 void DiamondTrap::attack(const std::string &target)
 {
 	ScavTrap::attack(target);
+}
+
+//----------------- Getter -----------------
+
+std::string	DiamondTrap::getName(void) const
+{
+	return (_name);
+}
+
+int	DiamondTrap::getHP(void) const
+{
+	return (_hp);
+}
+
+int	DiamondTrap::getEP(void) const
+{
+	return (_ep);
+}
+
+int	DiamondTrap::getAttack(void) const
+{
+	return (_attack);
 }

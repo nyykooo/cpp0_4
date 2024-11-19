@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:44:46 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:14:35 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:35:15 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ class FragTrap : virtual public ClapTrap
 		FragTrap& operator=(const FragTrap& copy);
 		
 		void	highFiveGuys(void);
+
+		// Getters
+		std::string	getName(void) const;
+		int			getHP(void) const;
+		int			getEP(void) const;
+		int			getAttack(void) const;
 };
 
 #endif

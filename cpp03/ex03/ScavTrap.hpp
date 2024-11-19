@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:07:37 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:14:41 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:35:41 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ class ScavTrap : virtual public ClapTrap
 
 		void attack(const std::string &target);
 		void		guardGate();
+
+		// Getters
+		std::string	getName(void) const;
+		int			getHP(void) const;
+		int			getEP(void) const;
+		int			getAttack(void) const;
 };
 
 #endif

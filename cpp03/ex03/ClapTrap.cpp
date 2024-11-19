@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/02 19:23:40 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:34:05 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,26 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << this->_name << " is too tired to repair" << std::endl;
 	else
 		std::cout << this->_name << " is dead..." << std::endl;
+}
+
+// GETTERS
+
+std::string	ClapTrap::getName(void) const
+{
+	return this->_name;
+}
+
+int	ClapTrap::getHP(void) const
+{
+	return this->_hp;
+}
+
+int	ClapTrap::getEP(void) const
+{
+	return this->_ep;
+}
+
+int	ClapTrap::getAttack(void) const
+{
+	return this->_attack;
 }

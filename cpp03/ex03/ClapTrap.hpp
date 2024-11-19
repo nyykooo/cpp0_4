@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:42 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/02 19:41:39 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:32:39 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ class ClapTrap
 		virtual void	attack(const std::string &target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
+
+		// Getters
+		std::string		getName(void) const;
+		int				getHP(void) const;
+		int				getEP(void) const;
+		int				getAttack(void) const;
 };
 
 

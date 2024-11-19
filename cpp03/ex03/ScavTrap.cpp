@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:07:35 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:27:13 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:35:55 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,25 @@ void	ScavTrap::guardGate()
 	else
 		std::cout << "ScavTrap " << this->_name << " is dead..." << std::endl;
 		
+}
+
+// Getters
+std::string	ScavTrap::getName(void) const
+{
+	return (this->_name);
+}
+
+int			ScavTrap::getHP(void) const
+{
+	return (this->_hp);
+}
+
+int			ScavTrap::getEP(void) const
+{
+	return (this->_ep);
+}
+
+int			ScavTrap::getAttack(void) const
+{
+	return (this->_attack);
 }

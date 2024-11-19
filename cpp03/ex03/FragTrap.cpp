@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:44:48 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/03 17:02:09 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:35:28 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,25 @@ void	FragTrap::highFiveGuys( void )
 		std::cout << "FragTrap is too tired to high five" << std::endl;
 	else
 		std::cout << "FragTrap is already dead" << std::endl;
+}
+
+// Getters
+std::string	FragTrap::getName(void) const
+{
+	return (this->_name);
+}
+
+int			FragTrap::getHP(void) const
+{
+	return (this->_hp);
+}
+
+int			FragTrap::getEP(void) const
+{
+	return (this->_ep);
+}
+
+int			FragTrap::getAttack(void) const
+{
+	return (this->_attack);
 }
