@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/18 19:30:22 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:18:33 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,7 @@ void	ClapTrap::attack(const std::string &target)
 	if (this->_ep > 0 && this->_hp > 0)
 	{
 		this->_ep--;
-		int	attack = std::rand() % 10 + 1;
-		std::cout << "ClapTrap " << this->_name << "attacks " << target << ", causing " << attack << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << "attacks " << target << ", causing " << _attack << " points of damage!" << std::endl;
 	}
 	else if (this->_hp > 0)
 		std::cout << "ClapTrap " << this->_name << " is too tired to attack" << std::endl;
