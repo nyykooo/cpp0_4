@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:46 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 19:16:12 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:28:06 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,11 @@ int main()
 	{
 		std::cout << "### CONSTRUCTORS ###" << std::endl;
 		DiamondTrap a;
+		DiamondTrap b("Jubileu");
+
+		std::cout << std::endl << "### TESTING ACTIONS ###" << std::endl;
+		b.attack("some other robot");
+		b.whoAmI();
 	}
 	return (0);
 }
