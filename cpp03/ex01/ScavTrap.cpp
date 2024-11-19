@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:07:35 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/18 19:52:38 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:25:04 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ void	ScavTrap::attack(const std::string &target)
 	if (this->_ep > 0 && this->_hp > 0)
 	{
 		this->_ep--;
-		std::cout << "ScavTrap " << this->_name << "attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
 	}
 	else if (this->_hp > 0)
 		std::cout << "ScavTrap " << this->_name << " is too tired to attack" << std::endl;
 	else
-		std::cout << "ScavTrap " << this->_name << " is dead..." << std::endl;
+		std::cout << "ScavTrap " << this->_name << " can't attack because he's dead..." << std::endl;
 }
 
 void	ScavTrap::guardGate()

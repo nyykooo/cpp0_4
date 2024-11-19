@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/18 19:51:34 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:26:17 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ void	ClapTrap::attack(const std::string &target)
 	if (this->_ep > 0 && this->_hp > 0)
 	{
 		this->_ep--;
-		std::cout << "ClapTrap " << this->_name << "attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
 	}
 	else if (this->_hp > 0)
 		std::cout << "ClapTrap " << this->_name << " is too tired to attack" << std::endl;
 	else
-		std::cout << "ClapTrap " << this->_name << " is dead..." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attack because he's dead..." << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -64,7 +64,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (this->_hp > 0)
 	{
 		this->_hp -= amount;
-		std::cout << this->_name << " took " << amount << " damage" << std::endl;
+		std::cout << this->_name << " take " << amount << " damage" << std::endl;
 	}
 	else
 		std::cout << this->_name << " is already dead..." << std::endl;
