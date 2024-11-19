@@ -6,12 +6,11 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:46 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 16:16:48 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:25:51 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
