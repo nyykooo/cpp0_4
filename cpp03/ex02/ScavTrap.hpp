@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:07:37 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/10/03 15:30:14 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:32:15 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap& operator=(const ScavTrap& copy);
 		~ScavTrap();
 
-		void attack(const std::string &target) override;
+		virtual void attack(const std::string &target);
 		void		guardGate();
 };
 
