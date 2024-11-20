@@ -6,11 +6,11 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/20 19:01:29 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:35:24 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Includes.hpp"
 
 WrongAnimal::WrongAnimal(): _type("WrongAnimal")
 {

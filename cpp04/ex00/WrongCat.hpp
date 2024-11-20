@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:38:23 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:04:22 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:34:06 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ class WrongCat : public WrongAnimal
 		WrongCat(const WrongCat &copy);
 		WrongCat &operator=(WrongCat const &copy);
 		~WrongCat();
-	
-		void	makeSound() const;
 };
 
 #endif

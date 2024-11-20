@@ -6,11 +6,11 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/20 19:01:58 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:47:55 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+# include "Includes.hpp"
 
 WrongCat::WrongCat()
 {
@@ -41,7 +41,3 @@ WrongCat::~WrongCat()
 	std::cout << _type << " is feeling tired" << std::endl;
 }
 
-void	WrongCat::makeSound() const
-{
-	std::cout << "WrongCat: vriiaiaaaum" << std::endl;
-}
