@@ -6,29 +6,29 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:25:18 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:34:53 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:27:52 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 //----------------- Constructor/Destructor -----------------
-DiamondTrap::DiamondTrap(void): ClapTrap(), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(void): ClapTrap()
 {
-	_name = "default";
-	_hp = FragTrap::_hp;
-	_ep = ScavTrap::_ep;
-	_attack = FragTrap::_attack;
+	this->_name = "";
+	this->_ep = 50;
+	this->_hp = FragTrap::_hp;
+	this->_attack = FragTrap::_attack;
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
 {
-	_hp = FragTrap::_hp;
-	_ep = ScavTrap::_ep;
-	_attack = FragTrap::_attack;
-	std::cout << "DiamondTrap constructor called" << std::endl;
 	this->_name = name;
+	this->_ep = 50;
+	this->_hp = FragTrap::_hp;
+	this->_attack = FragTrap::_attack;
+	std::cout << "DiamondTrap constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy): ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
@@ -50,8 +50,8 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 	if (this == &copy)
 		return (*this);
 	_name = copy._name;
-	_hp = copy._hp;
 	_ep = copy._ep;
+	_hp = copy._hp;
 	_attack = copy._attack;
 	return (*this);
 }
@@ -59,7 +59,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 //----------------- Member function -----------------
 void	DiamondTrap::whoAmI()
 {
-	std::cout << "I am " << _name << " and my ClapTrap name is " << ScavTrap::_name << std::endl;
+	std::cout << "I am " << _name << " and my ClapTrap name is " <<  ClapTrap::_name << std::endl;
 }
 
 void DiamondTrap::attack(const std::string &target)

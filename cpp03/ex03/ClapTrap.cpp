@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:51:43 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/19 20:34:05 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:25:54 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_ep--;
 		this->_hp += amount;
-		std::cout << "Repaired " << amount << " hit points" << std::endl;
+		std::cout << _name << " repaired " << amount << " hit points" << std::endl;
 	}
 	else if (this->_hp > 0)
 		std::cout << this->_name << " is too tired to repair" << std::endl;
