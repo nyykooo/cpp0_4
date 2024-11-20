@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/09 18:44:08 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:51:01 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog()
 	std::cout << _type << " is a beatiful puppy" << std::endl;
 }
 
-Dog::Dog ( const Dog &copy )
+Dog::Dog ( const Dog &copy ) : Animal(copy)
 {
 		std::cout << "Copy constructor called" << std::endl;
 		_type = copy._type;
