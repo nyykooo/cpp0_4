@@ -6,7 +6,7 @@
 #    By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 10:39:21 by ncampbel          #+#    #+#              #
-#    Updated: 2024/11/19 19:16:21 by ncampbel         ###   ########.fr        #
+#    Updated: 2024/11/20 15:45:47 by ncampbel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,5 +34,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-.SILENT:
