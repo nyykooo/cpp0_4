@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:04:54 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:01:58 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongCat::WrongCat()
 	std::cout << _type <<" is a beatiful puppy" << std::endl;
 }
 
-WrongCat::WrongCat ( const WrongCat &copy )
+WrongCat::WrongCat ( const WrongCat &copy ) : WrongAnimal(copy)
 {
 	if (this != &copy)
 	{
@@ -31,7 +31,7 @@ WrongCat&	WrongCat::operator=(WrongCat const &copy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy) {
-		*this = copy;
+		this->_type = copy._type;
 	}
 	return *this;
 }
