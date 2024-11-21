@@ -6,18 +6,18 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/20 23:58:08 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:42:27 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Includes.hpp"
 
-Animal::Animal(): _type("Animal")
+AAnimal::AAnimal(): _type("Animal")
 {
 	std::cout << ANSI_RED << "🙊 " + _type << " is born healthy 🙊" << ANSI_RESET << std::endl;
 }
 
-Animal::Animal ( const Animal &copy )
+AAnimal::AAnimal ( const AAnimal &copy )
 {
 	if (this != &copy)
 	{
@@ -26,7 +26,7 @@ Animal::Animal ( const Animal &copy )
 	}
 }
 
-Animal&	Animal::operator=(Animal const &copy) {
+AAnimal&	AAnimal::operator=(AAnimal const &copy) {
 	std::cout << ANSI_RED << "🙊 Copy assignment operator called 🙊" << ANSI_RESET << std::endl;
 	if (this != &copy) {
 		this->_type = copy._type;
@@ -34,17 +34,12 @@ Animal&	Animal::operator=(Animal const &copy) {
 	return *this;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	std::cout << ANSI_RED << "🙊 " + _type << " is resting now 🙊" << ANSI_RESET << std::endl;
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
 	return (this->_type);
-}
-
-void	Animal::makeSound() const
-{
-	std::cout << "🙊 Animal: pipipi popopo 🙊" << std::endl;
 }

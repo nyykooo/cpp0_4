@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 00:28:20 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:41:12 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ int main()
 {
 	{	
 		std::cout << "[ANIMALS]" << std::endl;
-		const Animal* meta = new Animal();
-		const Animal* bilson = new Dog();
-		const Animal* douglas = new Cat();
+		// const AAnimal* meta = new AAnimal();
+		const AAnimal* bilson = new Dog();
+		const AAnimal* douglas = new Cat();
 		const WrongAnimal* cho = new WrongCat();
 		
 		std::cout << std::endl << "[TYPES]" << std::endl;
-		std::cout << "meta is a " << meta->getType() << std::endl;
+		// std::cout << "meta is a " << meta->getType() << std::endl;
 		std::cout << "bilson type is a " << bilson->getType() << std::endl;
 		std::cout << "douglas is a " << douglas->getType() << std::endl;
 		std::cout << "cho is a " << cho->getType() << std::endl;
 
 		std::cout << std::endl << "[SOUNDS]" << std::endl;
-		meta->makeSound();
+		// meta->makeSound();
 		bilson->makeSound();
 		douglas->makeSound();
 		cho->makeSound();
@@ -37,12 +37,12 @@ int main()
 		delete cho;
 		delete douglas;
 		delete bilson;
-		delete meta;
+		// delete meta;
 	}
 	{
 		size_t i = 6;
 		std::cout << std::endl << "[EXTRA TESTS]" << std::endl;
-		Animal* animals[6];
+		AAnimal* animals[6];
 
 		while (i > 3)
 			animals[--i] = new Dog();

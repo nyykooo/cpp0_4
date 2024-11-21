@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:37:41 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:02:49 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:38:59 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 # include <iostream>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string	_type;
 	public:
-		Animal();
-		Animal(const Animal &copy);
-		Animal &operator=(Animal const &copy);
-		virtual ~Animal();
+		AAnimal();
+		AAnimal(const AAnimal &copy);
+		AAnimal &operator=(AAnimal const &copy);
+		virtual ~AAnimal();
 
 		std::string		getType() const;
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 };
 
 #endif

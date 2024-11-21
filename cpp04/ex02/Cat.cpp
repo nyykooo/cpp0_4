@@ -6,20 +6,20 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 00:09:16 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:40:12 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Includes.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	_type = "Cat";
 	std::cout << "🐈 " << ANSI_GREEN << _type <<" is a beatiful kitten" << ANSI_RESET << " 🐈" << std::endl;
 	_brain = new Brain();
 }
 
-Cat::Cat ( const Cat &copy ) : Animal(copy)
+Cat::Cat ( const Cat &copy ) : AAnimal(copy)
 {
 		std::cout << "🐈 " << ANSI_GREEN << "Copy constructor called" << ANSI_RESET << " 🐈" << std::endl;
 	_type = copy._type;
