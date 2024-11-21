@@ -6,27 +6,35 @@
 #    By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 10:39:21 by ncampbel          #+#    #+#              #
-#    Updated: 2024/11/21 16:36:32 by ncampbel         ###   ########.fr        #
+#    Updated: 2024/11/21 23:47:56 by ncampbel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= Animal
+NAME= Interface
 
 CXX= c++
 
 CXXFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
-SRC = main.cpp
+SRC_DIR = main AMateria Character Cure Ice MateriaSource
 
-OBJ = $(SRC:.cpp=.o)
+SRC = $(addsuffix .cpp, $(addprefix src/, $(SRC_DIR)))
+
+OBJ_DIR = obj
+
+OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(OBJ)
+	rm -rfd $(OBJ_DIR)
 	
 fclean: clean
 	rm -f $(NAME)
