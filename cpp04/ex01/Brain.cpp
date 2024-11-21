@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 23:19:37 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 00:00:36 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:22:40 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,17 @@ Brain::~Brain()
 	std::cout << ANSI_PURPLE << "🧠 Brain is getting dizzy 🧠" << ANSI_RESET << std::endl;
 }
 
+void	Brain::setIdea(std::string idea, int index)
+{
+	std::cout << ANSI_PURPLE << "🧠 Brain is having an idea 🧠" << ANSI_RESET << std::endl;
+	if (index >= 0 && index < 100)
+		this->_ideas[index] = idea;
+}
+
+std::string	Brain::getIdea(int index) const
+{
+	std::cout << ANSI_PURPLE << "🧠 Brain is sharing an idea 🧠" << ANSI_RESET << std::endl;
+	if (index >= 0 && index < 100)
+		return this->_ideas[index];
+	return "No idea";
+}

@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 00:10:48 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:28:20 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,19 +59,28 @@ int main()
 	{
 		std::cout << std::endl << "[DEEP COPY]" << std::endl;
 		Dog original;
+		Brain *brain = original.getBrain();
+		brain->setIdea("I am a dog.", 0);
+		brain->setIdea("I like to bark.", 1);
+		brain->setIdea("I like to chase cats.", 2);
+		
 		Dog copy(original);
 
 		Dog another;
 		another = original;
 
-		// verify that the brain is a deep copy
-		// verify with brain tests
 		std::cout << std::endl << "[DEEP COPY TESTS]" << std::endl;
-		if (original.getBrain() != copy.getBrain()) {
-			std::cout << "Deep copy successful for copy constructor." << std::endl;
-		} else {
-			std::cout << "Deep copy failed for copy constructor." << std::endl;
-		}
+		std::cout << "Copy ideas:" << std::endl;
+		brain = copy.getBrain();
+		std::cout << "Idea 0: " << brain->getIdea(0) << std::endl;
+		std::cout << "Idea 1: " << brain->getIdea(1) << std::endl;
+		std::cout << "Idea 2: " << brain->getIdea(2) << std::endl;
+
+		std::cout << "Another ideas:" << std::endl;
+		brain = another.getBrain();
+		std::cout << "Idea 0: " << brain->getIdea(0) << std::endl;
+		std::cout << "Idea 1: " << brain->getIdea(1) << std::endl;
+		std::cout << "Idea 2: " << brain->getIdea(2) << std::endl;
 
 		if (original.getBrain() != another.getBrain()) {
 			std::cout << "Deep copy successful for copy assignment operator." << std::endl;
