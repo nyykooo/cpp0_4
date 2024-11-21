@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:36:17 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/20 23:54:41 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:10:48 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int main()
 		cho->makeSound();
 
 		std::cout << std::endl << "[DESTRUCTORS]" << std::endl;
-		delete meta;
-		delete bilson;
-		delete douglas;
 		delete cho;
+		delete douglas;
+		delete bilson;
+		delete meta;
 	}
 	{
 		size_t i = 6;

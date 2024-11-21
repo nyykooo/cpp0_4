@@ -6,31 +6,31 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:39:51 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/20 23:51:01 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/21 00:09:43 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Includes.hpp"
 
 Dog::Dog()
 {
 	_type = "Dog";
+	std::cout << ANSI_BLUE << "🐕 " + _type <<" is a beatiful puppy 🐕" << ANSI_RESET << std::endl;
 	_brain = new Brain();
-	std::cout << _type << " is a beatiful puppy" << std::endl;
 }
 
 Dog::Dog ( const Dog &copy ) : Animal(copy)
 {
-		std::cout << "Copy constructor called" << std::endl;
 		_type = copy._type;
+		std::cout << ANSI_BLUE << "🐕 Copy constructor called 🐕" << ANSI_RESET << std::endl;
 		_brain = new Brain(*copy._brain);
 }
 
 Dog&	Dog::operator=(Dog const &copy) 
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy) {
 		_type = copy._type;
+		std::cout << ANSI_BLUE << "🐕 Copy assignment operator called 🐕" << ANSI_RESET << std::endl;
 		delete _brain; // delete the old brain and allocate a new one equals to the copy's brain, prevents shallow copy
 		_brain = new Brain(*copy._brain);
 	}
@@ -40,12 +40,12 @@ Dog&	Dog::operator=(Dog const &copy)
 Dog::~Dog()
 {
 	delete _brain;
-	std::cout << _type << " is feeling tired" << std::endl;
+	std::cout << ANSI_BLUE << "🐕 " + _type << " is feeling tired 🐕" << ANSI_RESET << std::endl;
 }
 
 void	Dog::makeSound() const
 {
-	std::cout << "Dog: Au Au" << std::endl;
+	std::cout << "🐕 Dog: Au Au 🐕" << std::endl;
 }
 
 Brain*	Dog::getBrain() const

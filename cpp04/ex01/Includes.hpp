@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:33:35 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/08 23:27:01 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:59:39 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@
 # define ANSI_GREEN "\033[32m"
 # define ANSI_YELLOW "\033[33m"
 # define ANSI_BLUE "\033[34m"
+# define ANSI_PURPLE "\033[35m"
 
 #endif
