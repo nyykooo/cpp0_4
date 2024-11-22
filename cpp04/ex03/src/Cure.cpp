@@ -6,13 +6,15 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:22:11 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:47:19 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:56:27 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Cure.hpp"
 
-Cure::Cure() : AMateria("cure") {}
+Cure::Cure() : AMateria("cure") {
+	_type = "cure";
+}
 
 Cure::Cure(Cure const & copy) : AMateria(copy) {}
 
@@ -20,6 +22,7 @@ Cure & Cure::operator=(Cure const & copy)
 {
 	if (this != &copy)
 	{
+		_type = copy._type;
 	}
 	return (*this);
 }

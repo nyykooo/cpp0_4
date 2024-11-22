@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:36:37 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/22 00:04:10 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:51:35 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,13 @@ int main()
 		Cure *cure3 = new Cure();
 		Character *sourcerer = new Character("sourcerer");
 		Character *dummie = new Character("dummie");
+		AMateria *floorCure;
+		AMateria *floorIce;
 
-		
+		std::cout << "### GET TYPE ###" << std::endl;
+		std::cout << "🧊  Ice Type: " << ice1->getType() + "  🧊" << std::endl;
+		std::cout << "🩹  Cure Type: " << cure1->getType() + "  🩹" << std::endl;
+
 		src->learnMateria(ice1);
 		src->learnMateria(ice2);
 		src->learnMateria(ice3);
@@ -82,6 +87,10 @@ int main()
 		sourcerer->equip(src->createMateria("cure"));
 		sourcerer->equip(src->createMateria("ice"));
 		sourcerer->equip(src->createMateria("cure"));
+
+		std::cout << "### GET TYPE2 ###" << std::endl;
+		std::cout << "🧊  Ice Type: " << sourcerer->getMateria(0)->getType() + "  🧊" << std::endl;
+		std::cout << "🩹  Cure Type: " << sourcerer->getMateria(1)->getType() + "  🩹" << std::endl;
 
 		std::cout << "### SOURCERER MATERIAS ###" << std::endl;
 		sourcerer->use(0, *dummie);
@@ -96,11 +105,40 @@ int main()
 		dummie->use(2, *sourcerer);
 		dummie->use(3, *sourcerer);
 
+		std::cout << "### DEEP COPY ###" << std::endl;
+		Character *sourcerer2 = new Character(*sourcerer);
+		Character *dummie2 = new Character(*dummie);
+		
+		std::cout << "### SOURCERER2 MATERIAS ###" << std::endl;
+		sourcerer2->use(0, *dummie2);
+		sourcerer2->use(1, *dummie2);
+		sourcerer2->use(2, *dummie2);
+		sourcerer2->use(3, *dummie2);
+
+		std::cout << "### DUMMIE2 MATERIAS ###" << std::endl;
+		dummie2->use(0, *sourcerer2);
+		dummie2->use(1, *sourcerer2);
+		dummie2->use(2, *sourcerer2);
+		dummie2->use(3, *sourcerer2);
+		
+		std::cout << "### FLOOR ###" << std::endl;
+		floorCure = sourcerer->getMateria(1);
+		std::cout << "⬇️  Floor Cure: " << floorCure->getType() + "  ⬇️" << std::endl;
+		floorIce = sourcerer->getMateria(0);
+		std::cout << "⬇️  Floor Ice: " << floorIce->getType() + "  ⬇️" << std::endl;
+
+		sourcerer->unequip(1);
+		sourcerer->unequip(0);
+
 		delete src;
 		delete cure2;
 		delete cure3;
 		delete sourcerer;
 		delete dummie;
+		delete sourcerer2;
+		delete dummie2;
+		delete floorCure;
+		delete floorIce;
 	}
 	return 0;
 }

@@ -6,13 +6,15 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:23:05 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:48:30 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:56:08 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Ice.hpp"
 
-Ice::Ice() : AMateria("ice") {}
+Ice::Ice() : AMateria("ice") {
+	_type = "ice";
+}
 
 Ice::Ice(Ice const & copy) : AMateria(copy) {}
 
@@ -20,6 +22,7 @@ Ice & Ice::operator=(Ice const & copy)
 {
 	if (this != &copy)
 	{
+		_type = copy._type;
 	}
 	return (*this);
 }

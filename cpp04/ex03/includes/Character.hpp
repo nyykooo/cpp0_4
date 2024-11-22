@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:10:47 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:21:22 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:40:02 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ class Character : public ICharacter
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
+
+		AMateria *getMateria(int idx) const;
 };
 
 #endif

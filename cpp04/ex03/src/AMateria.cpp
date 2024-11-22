@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 22:57:55 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:47:07 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:56:13 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ AMateria & AMateria::operator=(AMateria const & copy)
 {
 	if (this != &copy)
 	{
+		_type = copy._type;
 	}
 	return (*this);
 }
