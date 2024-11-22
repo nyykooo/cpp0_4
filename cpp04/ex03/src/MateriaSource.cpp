@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:23:47 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:47:30 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:08:13 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void MateriaSource::learnMateria(AMateria* m)
 		_source[_count] = m;
 		_count++;
 	}
+	else
+		std::cout << "📚 MateriaSource is full! 📚" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
