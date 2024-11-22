@@ -6,7 +6,7 @@
 /*   By: ncampbel <ncampbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:21:34 by ncampbel          #+#    #+#             */
-/*   Updated: 2024/11/21 23:47:15 by ncampbel         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:05:55 by ncampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void Character::equip(AMateria* m)
 		_inventory[_count] = m;
 		_count++;
 	}
+	else
+		std::cout << "Unable to equip" << std::endl;
 }
 
 void Character::unequip(int idx)
@@ -77,10 +79,14 @@ void Character::unequip(int idx)
 			_inventory[i] = _inventory[i + 1];
 		_inventory[_count - 1] = NULL;
 	}
+	else
+		std::cout << "Unable to unequip" << std::endl;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 0 && idx < _count && _inventory[idx])
 		_inventory[idx]->use(target);
+	else
+		std::cout << "Unable to use" << std::endl;
 }
